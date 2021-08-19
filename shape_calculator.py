@@ -19,8 +19,18 @@ class Rectangle:
         return (self.width ** 2 + self.height ** 2) ** .5
 
     def get_picture(self):
+        counter = self.height
         shape = "*"
-        return shape
+        lines = ""
+
+        if (self.height > 50 or self.width > 50):
+            return "Too big for picture."
+
+        while (counter > 0):
+            lines += (shape * self.width) + "\n"
+            counter -= 1
+
+        return lines
 
     def get_amount_inside(self):
         return 'square'
