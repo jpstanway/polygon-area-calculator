@@ -1,3 +1,6 @@
+import math
+
+
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
@@ -33,8 +36,7 @@ class Rectangle:
         return lines
 
     def get_amount_inside(self, shape):
-
-        return shape
+        return math.floor(self.get_area() / shape.get_area())
 
 
 class Square(Rectangle):
