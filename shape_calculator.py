@@ -6,6 +6,9 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        return 'Rectangle(width=' + str(self.width) + ', height=' + str(self.height) + ')'
+
     def set_width(self, width):
         self.width = width
 
@@ -42,7 +45,22 @@ class Rectangle:
 class Square(Rectangle):
     def __init__(self, side):
         Rectangle.__init__(self, side, side)
+        self.side = side
+
+    def __str__(self):
+        return 'Square(side=' + str(self.side) + ')'
 
     def set_side(self, side):
-        self.width = side
+        self.side = side
         self.height = side
+        self.width = side
+
+    def set_height(self, height):
+        self.height = height
+        self.width = height
+        self.side = height
+
+    def set_width(self, width):
+        self.width = width
+        self.height = width
+        self.side = width
